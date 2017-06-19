@@ -1,0 +1,41 @@
+{
+	"env_list": [
+		{
+			"environment": "demo",
+			"url": "",
+			"port": "9090"
+		}, 
+		{
+			"environment": "staging",
+			"url": "",
+			"port": "8090"
+		},
+		{	"environment": "live",
+			"url": "",
+			"port": "8000"
+		}
+	],
+
+	"userlist":[
+		{
+			"username": "user1",
+			"password": "user1@1234"
+		},
+		{
+			"username": "user2",
+			"password": "testuser2"
+		}
+	],
+
+	"apilist":[
+		{
+			"login": "/api/api_token_auth",
+			"member": "/api/member",
+			"membertheme": "/api/member_theme",
+			"sensor": "/api/sensor"
+		}
+	],
+
+	"token" : ""
+
+}

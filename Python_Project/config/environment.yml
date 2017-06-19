@@ -1,0 +1,3 @@
+api_demo:
+  baseurl: http://demo.smartsen.se
+  port: 9080

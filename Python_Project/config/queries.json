@@ -1,0 +1,8 @@
+{
+	"queries_list": [
+		{
+			"login": "SELECT \"MemberId\" from \"Member\" where \"UserName\" in ('{}')",
+			"sensor": "WITH RECURSIVE \"LocationList\" AS (SELECT \"Location\".* FROM \"Location\" where \"Location\".\"LocationId\" in (SELECT \"Location\".\"LocationId\" FROM \"Location\" JOIN \"MemberLocation\" ON \"MemberLocation\".\"LocationId\" = \"Location\".\"LocationId\" AND \"MemberId\" in (SELECT \"MemberId\" from \"Member\" where \"UserName\" in ('{}')) ) UNION ALL SELECT d.* FROM \"Location\" AS d JOIN \"LocationList\" AS sd ON (d.\"ParentLocationId\" = sd.\"LocationId\")) SELECT \"Sensor\".* FROM \"Sensor\" Join \"LocationList\" on \"Sensor\".\"MappedLocationId\" = \"LocationList\".\"LocationId\" ORDER BY \"SensorId\""
+		}
+	]
+}
