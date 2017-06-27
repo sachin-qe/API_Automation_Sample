@@ -1,41 +1,68 @@
 import json
 import requests
-import httplib
-import psycopg2
-import function_library
+import urllib2, urllib
 
-class login:
-    json_data = json.loads(open("../config/config.json").read())
-    # def __init__(self):
-        # self.username = username
-        # self.password = password
+# import httplib,urllib
+# import ast
+# import psycopg2
+import os
 
-    def login_data():
-        username = json_data['userlist'][0]['username']
-        password = json_data['userlist'][0]['password']
-        login_url =  get_base_url() + json_data['apilist'][0]['login'] + "?username=" + username + "&password=" + password
+import sys
+sys.path.append('../lib')
+
+from function_library import *
+
+class login():
+    
+    def __init__(self):
+        self.json_data = json.loads(open("../config/config.json").read())
+        self.username = self.json_data['userlist'][0]['username']
+        self.password = self.json_data['userlist'][0]['password']
+        self.objfunctlib = function_library()
+
+    def login_url(self):
+        login_url =  self.json_data['apilist'][0]['login'] #+ "?username=" + username + "&password=" + password
         return login_url
 
-    def login_api():
-        conn =  httplib.HTTPConnection()
-        conn.request("GET", login_data())
-        readable_login_response = api_response(login_url)
-        token_value = json.loads(readable_login_response)['token']
-        return token_value
+    # def login_api(self):
+    #     try:
+    #         login_data = urllib.urlencode({"username" : self.username, "password" : self.password})
+    #         login_request = urllib2.Request(self.objfunctlib.get_base_url()+self.login_url(),login_data)
+    #         login_response = urllib2.urlopen(login_request).read().decode("utf-8")
+    #         token_value = "token:" + ast.literal_eval(login_response)['token']
+    #         member_id = ast.literal_eval(login_response)['memberid']
+    #         return token_value, member_id
+    #     except Exception as ex:
+    #         print ex
 
-    def login_db():
-        # import pdb;pdb.set_trace()
-        connect_db()
-        json_data = json.loads(open("../config/queries.json").read())
-        query = json_data['queries_list'][0]['login'].format(json_data['userlist'][0]['username'])
-        print query
-        db_query_result() 
+    def login_api(self):
+            login_data = urllib.urlencode({"username" : self.username, "password" : self.password})
+            login_request = urllib2.Request(self.objfunctlib.get_base_url()+self.login_url(),login_data)
+            login_response = urllib2.urlopen(login_request).read().decode("utf-8")
+            dict_api_response = json.loads(login_response)  
 
-# login_data()
-# response_login_api()
-# sensor()
+            filename = '../config/config.json'
+            with open(filename, 'r') as f:
+                data = json.load(f)
+                data['token'] = "token:" + dict_api_response['token']
 
-# l = login()
-# l.login_data()
-# l.reponse_login_api()
-# l.response_login_db()
+            os.remove(filename)
+            with open(filename, 'w') as f:
+                # data['token'] = "token:" + dict_api_response['token']
+                json.dump(data, f, indent=5)
+                # f.write(json.dumps(data))            
+
+
+            # return dict_api_response
+            token_value = "token:" + dict_api_response['token']
+            member_id = dict_api_response['memberid']
+            return token_value, member_id
+
+
+    def login_db(self):
+        self.objfunctlib.connect_db()
+        self.query_json_data = json.loads(open("../config/queries.json").read())
+        self.query = self.query_json_data['queries_list'][0]['login'].format(self.json_data['userlist'][0]['username'])
+        member_details = self.objfunctlib.db_query_result(self.query)
+        member_id = member_details[0]["MemberId"]
+        return member_id

@@ -1,8 +1,11 @@
 {
 	"queries_list": [
 		{
-			"login": "SELECT \"MemberId\" from \"Member\" where \"UserName\" in ('{}')",
-			"sensor": "WITH RECURSIVE \"LocationList\" AS (SELECT \"Location\".* FROM \"Location\" where \"Location\".\"LocationId\" in (SELECT \"Location\".\"LocationId\" FROM \"Location\" JOIN \"MemberLocation\" ON \"MemberLocation\".\"LocationId\" = \"Location\".\"LocationId\" AND \"MemberId\" in (SELECT \"MemberId\" from \"Member\" where \"UserName\" in ('{}')) ) UNION ALL SELECT d.* FROM \"Location\" AS d JOIN \"LocationList\" AS sd ON (d.\"ParentLocationId\" = sd.\"LocationId\")) SELECT \"Sensor\".* FROM \"Sensor\" Join \"LocationList\" on \"Sensor\".\"MappedLocationId\" = \"LocationList\".\"LocationId\" ORDER BY \"SensorId\""
+			"login": "SELECT \"MemberId\", \"UserName\", \"FirstName\" from \"Member\" where \"UserName\" in ('{}')",
+			"member": "SELECT \"Address\".*, \"Client\".*, \"Member\".* from \"Address\" JOIN \"Client\" on (\"Address\".\"AddressId\" = \"Client\".\"AddressId\") JOIN \"Member\" on (\"Client\".\"ClientId\" = \"Member\".\"ClientId\") and \"Member\".\"UserName\" in ('{}')",
+			"membertheme":"SELECT * from \"MemberTheme\" where \"Id\" in (SELECT \"Theme\" from \"Member\" where \"UserName\" in ('{}'))",
+			"sensor":  "(WITH RECURSIVE \"SensorList\" AS (SELECT \"Sensor\".* FROM \"Sensor\" where \"Sensor\".\"SensorId\" in (SELECT \"Sensor\".\"SensorId\" FROM \"Sensor\" JOIN \"MemberSensor\" ON \"MemberSensor\".\"SensorId\" = \"Sensor\".\"SensorId\" AND \"MemberId\" in (SELECT \"MemberId\" from \"Member\" where \"UserName\" in ('{}'))) UNION ALL SELECT d.*FROM \"Sensor\" AS d JOIN \"SensorList\" AS sd ON (d.\"ParentSensorId\" = sd.\"SensorId\")) SELECT DISTINCT \"Sensor\".* FROM \"Sensor\" Join \"SensorList\" on \"Sensor\".\"SensorId\" = \"SensorList\".\"SensorId\" ORDER BY \"SensorId\")",
+			"readingtype": "SELECT DISTINCT \"ReadingTypeId\" from \"VersionReadingTypes\" where \"VersionCode\" in (SELECT \"Version\" from \"Sensor\" where \"SensorId\" in \r\n\t(WITH RECURSIVE \"SensorList\" AS \r\n\t\t(SELECT \"Sensor\".* FROM \"Sensor\" where \"Sensor\".\"SensorId\" in \r\n\t\t(SELECT \"Sensor\".\"SensorId\" FROM \"Sensor\" JOIN \"MemberSensor\" ON \"MemberSensor\".\"SensorId\" = \"Sensor\".\"SensorId\" AND \"MemberId\" in\r\n\t\t(SELECT \"MemberId\" from \"Member\" where \"UserName\" in ('intas')) \r\n\t\t)\r\n\t\tUNION ALL SELECT d.* FROM \"Sensor\" AS d JOIN \"SensorList\" AS sd ON (d.\"ParentSensorId\" = sd.\"SensorId\") \r\n\t\t)\r\n\t\tSELECT DISTINCT \"Sensor\".\"SensorId\" FROM \"Sensor\" Join \"SensorList\" on \"Sensor\".\"SensorId\" = \"SensorList\".\"SensorId\" \r\n\t)\r\n)\r\nORDER BY \"ReadingTypeId\" ASC"			
 		}
 	]
 }

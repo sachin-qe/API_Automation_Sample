@@ -1,24 +1,22 @@
-import os.path
 import unittest
-from urlparse import urlparse
 
-from pages import login
+import sys
+sys.path.append('../pages')
 
-from mock import patch
+from login import *
 
-class LoginTestCase(unittest.TestCase):
-    """Test case for the client methods."""
-
-    def setUp(self):
-        login_obj = login()
-        login_obj.login_data()
-        loginlogin_obj.login_api()
-        login_obj.login_db()
-        
-    def tearDown(self):
-        self.patcher.stop()
+class login_testcase(unittest.TestCase):
+    def setUp(self):       
+        self.login_obj = login()
+        self.login_obj.login_api()
+        self.login_obj.login_db()
 
     def test_request(self):
-        """Test a simple request."""
-        self.assertEqual(login_obj.login_api(), login_obj.login_db())
- 
+        """Test: Login API request."""
+        self.login_obj = login()
+        api_member_id = self.login_obj.login_api()[1]
+        db_member_id = self.login_obj.login_db()
+        self.assertEqual(api_member_id, db_member_id)
+
+#if __name__ == '__main__':
+#    unittest.main()

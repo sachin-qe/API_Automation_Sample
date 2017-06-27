@@ -1,0 +1,364 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mem",
+				"member_url"
+			],
+			[
+				"login",
+				"login"
+			],
+			[
+				"reponse",
+				"response"
+			],
+			[
+				"res",
+				"res"
+			],
+			[
+				"conn",
+				"conn"
+			],
+			[
+				"lo",
+				"login_data"
+			],
+			[
+				"se",
+				"self"
+			],
+			[
+				"set",
+				"setUp"
+			],
+			[
+				"as",
+				"assertEqual"
+			],
+			[
+				"reutn",
+				"return_api_response"
+			],
+			[
+				"connc",
+				"connect_db"
+			],
+			[
+				"respo",
+				"reponse_login_api"
+			],
+			[
+				"log",
+				"login_url"
+			],
+			[
+				"json",
+				"json_string"
+			],
+			[
+				"test",
+				"test_verify_login"
+			],
+			[
+				"sensorId",
+				"sensorid_list"
+			],
+			[
+				"sen",
+				"sensor_api"
+			],
+			[
+				"membe",
+				"member_id"
+			],
+			[
+				"toke",
+				"token_value"
+			],
+			[
+				"resu",
+				"result"
+			],
+			[
+				"api",
+				"api_url"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/ecolibrium/Desktop/Python_Project/tests/test_login.py",
+		"/home/ecolibrium/Desktop/APITest/Automation_PythonScripts/DB_test.py",
+		"/home/ecolibrium/Desktop/Python_Project/config/queries.json",
+		"/home/ecolibrium/Desktop/APITest/Automation_PythonScripts/Login.py",
+		"/home/ecolibrium/Desktop/Python_Project/config/config.json",
+		"/home/ecolibrium/Desktop/Python_Project/lib/function_library.py",
+		"/home/ecolibrium/Desktop/Python_Project/tests/test_member.py",
+		"/home/ecolibrium/Desktop/Python_Project/pages/login.py",
+		"/home/ecolibrium/Desktop/Python_Project/pages/member.py",
+		"/home/ecolibrium/Desktop/Python_Project/tests/test_sensor.py",
+		"/home/ecolibrium/Desktop/Python_Project/pages/sensor.py",
+		"/home/ecolibrium/Desktop/test.py",
+		"/home/ecolibrium/Desktop/APITest/Automation_PythonScripts/Project/tests/test_login.py",
+		"/home/ecolibrium/Desktop/APITest/Automation_PythonScripts/API_SeleniumPython.py",
+		"/home/ecolibrium/Desktop/APITest/Automation_PythonScripts/APIAuto_Mechanize.py",
+		"/home/ecolibrium/Desktop/Python_Project/__init__.py",
+		"/home/ecolibrium/Desktop/Python_Project/tests/__init__.py",
+		"/home/ecolibrium/Desktop/Python_Project/lib/__init__.py",
+		"/home/ecolibrium/Desktop/Python_Project/test_login.py",
+		"/home/ecolibrium/Desktop/Python_Project/pages/__init__.py",
+		"/home/ecolibrium/Desktop/Python_Project/pages/login_old.py",
+		"/home/ecolibrium/demo.exp",
+		"/media/ecolibrium/55BCC67E74BEA2F8/Queries.sql",
+		"/home/ecolibrium/Desktop/Python_Project/login.py",
+		"/home/ecolibrium/Desktop/Python_Project/config/environment.yml",
+		"/home/ecolibrium/Desktop/Python_Project/config/API_list.yml",
+		"/media/ecolibrium/55BCC67E74BEA2F8/sp_automation/spec/test.rb",
+		"/media/ecolibrium/55BCC67E74BEA2F8/sp_automation/spec/spec_helper.rb",
+		"/home/ecolibrium/Desktop/APITest/Automation_PythonScripts/Project/login.py",
+		"/home/ecolibrium/Desktop/APITest/Automation_PythonScripts/Project/tests/resources/users/testuser",
+		"/home/ecolibrium/Desktop/APITest/Automation_RubyScripts/rakefile",
+		"/home/ecolibrium/Desktop/APITest/Automation_RubyScripts/Test.rb",
+		"/home/ecolibrium/Desktop/API_Collection.js",
+		"/home/ecolibrium/Desktop/APITest/Test.postman_environment.json",
+		"/home/ecolibrium/Desktop/APITest/APITest_Welspun.postman_collection_NEW.json",
+		"/home/ecolibrium/Desktop/APITest_Welspun.postman_collection_NEW.json",
+		"/home/ecolibrium/Desktop/APITest/APITest_DMRC.postman_collection_NEW.json",
+		"/home/ecolibrium/Desktop/APITest_DMRC.postman_collection.json",
+		"/home/ecolibrium/Desktop/Test.postman_environment.json",
+		"/home/ecolibrium/Desktop/APITest_DMRC.postman_collection_NEW.json",
+		"/home/ecolibrium/Desktop/APITest_Sintex.postman_collection_NEW.json",
+		"/media/ecolibrium/55BCC67E74BEA2F8/sp_automation/pages/pcworld/TemplatePage.rb",
+		"/media/ecolibrium/55BCC67E74BEA2F8/sp_automation/lib/Function_Library.rb",
+		"/media/ecolibrium/55BCC67E74BEA2F8/sp_automation/config/API_Link_Checker.yml",
+		"/media/ecolibrium/55BCC67E74BEA2F8/sp_automation/config/Environment.yml",
+		"/media/ecolibrium/55BCC67E74BEA2F8/sp_automation/rakefile",
+		"/home/ecolibrium/Desktop/APITest_INTAS.postman_collection.json",
+		"/media/ecolibrium/55BCC67E74BEA2F8/Queries_Backup.sql",
+		"/home/ecolibrium/Desktop/server2.exp",
+		"/home/ecolibrium/Desktop/Wagh bakri CUG backup 29.01.2017/SIM 1 & 2 numbers 500/backup.dat",
+		"/home/ecolibrium/Desktop/ExerciseSchedule_1Day3Parts.xlsx",
+		"/media/ecolibrium/55BCC67E74BEA2F8/ZiffDavisAutomation/spec/PCMag_Redesign/NYQA-292_Speakers.rb",
+		"/media/ecolibrium/55BCC67E74BEA2F8/ZiffDavisAutomation/spec/PCMag_Redesign/NYQA-291_Headphones.rb",
+		"/media/ecolibrium/55BCC67E74BEA2F8/Reports/PCWorld/production/PCWorld_2017-01-25_12-25-20_.json",
+		"/media/ecolibrium/55BCC67E74BEA2F8/ZiffDavisAutomation/spec/spec_helper.rb",
+		"/media/ecolibrium/55BCC67E74BEA2F8/ZiffDavisAutomation/pages/pcmag/TemplatePage.rb",
+		"/media/ecolibrium/55BCC67E74BEA2F8/ZiffDavisAutomation/lib/Function_Library.rb",
+		"/home/ecolibrium/Desktop/customer_onboard/www/js/controllers.js",
+		"/home/ecolibrium/smartsense2",
+		"/media/ecolibrium/55BCC67E74BEA2F8/Protractor_Automation/conf.js",
+		"/media/ecolibrium/55BCC67E74BEA2F8/Automation/spec/test.rb",
+		"/media/ecolibrium/55BCC67E74BEA2F8/Automation/rakefile",
+		"/media/ecolibrium/55BCC67E74BEA2F8/Automation/test.rb",
+		"/media/ecolibrium/55BCC67E74BEA2F8/Protractor_Automation/Test.js"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"api_response",
+			"'",
+			"'\\\\",
+			"'",
+			"\"",
+			" \"",
+			"'/",
+			"\"",
+			"'",
+			"\"",
+			"unittest",
+			"False",
+			"^        ",
+			"http://demo.smartsen.se:9080",
+			"354ec3e27cf8",
+			"Authorization",
+			"Authorization: token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRtcmMiLCJtZW1iZXJpZCI6IjE3OCIsImN1clRpbWUiOiIyMDE3LTA1LTAyIDEzOjIxOjQ3LjM5Nzg4MSIsImV4cHRpbWUiOiIyMDE3LTA1LTAzIDEzOjIxOjQ3LjM5Nzg0MCJ9.s0FIhwlvbQtnS24V9Qcz_-ebpsafvO32BbLc0jZupGU\\n\"",
+			"^(\\{\\$)",
+			"^[\\{$]",
+			"^/{$",
+			"^{$",
+			"^({$)",
+			"17/04/21",
+			"17/04/19",
+			"3894215f",
+			"BILLING",
+			"TOTAL_CONSUMPTION_CHARGE_1",
+			"fuel",
+			"openHomePage",
+			"def openHomePage",
+			"openHomePage",
+			"getWait",
+			"win",
+			"night",
+			"Contract Demand",
+			"5000"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"",
+			"'",
+			"' \\",
+			"\"",
+			"'/",
+			"\"",
+			"'\\",
+			"\"",
+			"'/",
+			"\"",
+			"'",
+			"",
+			"{{beta}}",
+			"17/04/23",
+			"17/04/21",
+			"0878813f"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "member.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
