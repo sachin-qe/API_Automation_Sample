@@ -21,19 +21,8 @@ class login():
         self.objfunctlib = function_library()
 
     def login_url(self):
-        login_url =  self.json_data['apilist'][0]['login'] #+ "?username=" + username + "&password=" + password
+        login_url =  self.json_data['apilist'][0]['login']
         return login_url
-
-    # def login_api(self):
-    #     try:
-    #         login_data = urllib.urlencode({"username" : self.username, "password" : self.password})
-    #         login_request = urllib2.Request(self.objfunctlib.get_base_url()+self.login_url(),login_data)
-    #         login_response = urllib2.urlopen(login_request).read().decode("utf-8")
-    #         token_value = "token:" + ast.literal_eval(login_response)['token']
-    #         member_id = ast.literal_eval(login_response)['memberid']
-    #         return token_value, member_id
-    #     except Exception as ex:
-    #         print ex
 
     def login_api(self):
             login_data = urllib.urlencode({"username" : self.username, "password" : self.password})
@@ -48,10 +37,7 @@ class login():
 
             os.remove(filename)
             with open(filename, 'w') as f:
-                # data['token'] = "token:" + dict_api_response['token']
                 json.dump(data, f, indent=5)
-                # f.write(json.dumps(data))            
-
 
             # return dict_api_response
             token_value = "token:" + dict_api_response['token']
